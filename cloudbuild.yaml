@@ -1,3 +1,6 @@
+options:
+  logging: CLOUD_LOGGING_ONLY
+
 steps:
   # Step 1: Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
@@ -16,7 +19,7 @@ steps:
         gcloud run deploy express-api \
           --image gcr.io/lab-1-424317/express-api \
           --platform managed \
-          --region asia-southeast2 \
+          --region asia-southeast2-a \
           --allow-unauthenticated
 
 images:

@@ -20,7 +20,7 @@ steps:
           --image gcr.io/lab-1-424317/express-api \
           --platform managed \
           --region asia-southeast2 \
-          --set-env-vars NEW_RELIC_APP_NAME=express-newrelic,NEW_RELIC_LICENSE_KEY=34e2960dad19e513057f649d9c74a34aFFFFNRAL \
+          --set-env-vars NEW_RELIC_APP_NAME=express-newrelic-gcp,NEW_RELIC_LICENSE_KEY=086d965366432e56ba519e05f12a0c74FFFFNRAL \
           --allow-unauthenticated
 
 images:

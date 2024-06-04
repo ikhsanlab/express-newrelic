@@ -7,9 +7,6 @@ WORKDIR /usr/src/app
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
-# Install dependencies
-RUN sudo apt-get install -y build-essential python
-RUN rm -rf node_modules
 RUN npm install
 
 # Copy the rest of the application code

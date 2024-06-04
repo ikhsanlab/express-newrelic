@@ -8,14 +8,16 @@ steps:
     args: ['push', 'gcr.io/lab-1-424317/express-api']
 
   # Step 3: Deploy the Docker image to Google Cloud Run
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args: [
-      'run', 'deploy', 'express-api',
-      '--image', 'gcr.io/lab-1-424317/express-api',
-      '--platform', 'managed',
-      '--region', 'us-central1',
-      '--allow-unauthenticated'
-    ]
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        gcloud run deploy express-api \
+          --image gcr.io/lab-1-424317/express-api \
+          --platform managed \
+          --region asia-southeast2 \
+          --allow-unauthenticated
 
 images:
   - 'gcr.io/lab-1-424317/express-api'

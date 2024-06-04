@@ -19,7 +19,7 @@ steps:
         gcloud run deploy express-api \
           --image gcr.io/lab-1-424317/express-api \
           --platform managed \
-          --region asia-southeast2-a \
+          --region asia-southeast2 \
           --allow-unauthenticated
 
 images:
